@@ -1,11 +1,22 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js'
+        filename: 'index.js',
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        }),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['dist']
+        })
+    ],
     module:{
         rules: [
             {
@@ -16,7 +27,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader", 
+                    "style-loader",
                     "css-loader",
                     "sass-loader"
                 ],
@@ -25,9 +36,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['css-loader']
-            } 
+            }
         ]
     },
     devtool: 'source-map',
-    mode: 'development'
+    mode: 'development',
+    devServer : {
+        compress: true,
+        port: 3000
+    }
 }
