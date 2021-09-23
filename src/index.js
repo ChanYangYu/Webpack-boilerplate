@@ -1,2 +1,6 @@
-import './style.scss';
-document.querySelector('.main-cont').style.color = 'red';
+import Router from "./core/Router";
+
+document.addEventListener('DOMContentLoaded', () =>{
+    Router.init();
+    Router.render('/');
+})

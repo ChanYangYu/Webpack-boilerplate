@@ -48,9 +48,20 @@ Webpack-boilerplate
 │  package.json
 │  README.md
 │  webpack.config.js
+│
 ├─dist
 └─src
-        index.html
-        index.js
-        style.scss
+    │  index.html
+    │  index.js
+    │
+    ├─core
+    │      Component.js
+    │      Router.js
+    │
+    ├─scss
+    │      style.scss
+    │
+    └─view
+            FirstPage.js
+            SecondPage.js
 ```

@@ -1,5 +1,5 @@
-class Component{
-    constructor(element, props){
+export default class Component{
+    constructor(element, props ={}){
         this.element = element;
         this.props = props;
         this.setup();
@@ -19,5 +19,3 @@ class Component{
         this.mount();
     }
 }
-
-export default Component;
