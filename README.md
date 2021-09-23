@@ -2,15 +2,11 @@
  Boilerplate with babel.
 
 ## Installation
-
-------
 ```bash
 npm install
 ```
 
 ## Usage
-
-------
 ### Production build
 ```bash
 npm run build
@@ -21,7 +17,6 @@ npm run dev
 ```
 ## Dependencies
 
-------
 ### webpack
 - `webpack` : 5.52.0 
 - `webpack-cli` : 4.8.0
