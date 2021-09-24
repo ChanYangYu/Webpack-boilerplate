@@ -3,15 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './frontend/src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'frontend', 'dist'),
         filename: 'index.js',
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './frontend/src/index.html'
         }),
         new CleanWebpackPlugin({
             cleanAfterEveryBuildPatterns: ['dist']

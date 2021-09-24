@@ -11,9 +11,14 @@ npm install
 ```bash
 npm run build
 ```
-### Development Server
+### Development Frontend
 ```bash
 npm run dev
+```
+### Development Backend
+```bash
+npm run build
+npm run server
 ```
 ## Dependencies
 
@@ -42,26 +47,37 @@ npm run dev
 ```
 Webpack-boilerplate
 │  .gitignore
-│  app.js
 │  babel.config.json
 │  package-lock.json
 │  package.json
 │  README.md
 │  webpack.config.js
 │
-├─dist
-└─src
-    │  index.html
-    │  index.js
+├─backend
+│  │  server.js
+│  │
+│  └─routes
+│          api.js
+│          index.js
+│
+└─frontend
+    ├─dist
+    │      index.html
+    │      index.js
+    │      index.js.map
     │
-    ├─core
-    │      Component.js
-    │      Router.js
-    │
-    ├─scss
-    │      style.scss
-    │
-    └─view
-            FirstPage.js
-            SecondPage.js
+    └─src
+        │  index.html
+        │  index.js
+        │
+        ├─core
+        │      Component.js
+        │      Router.js
+        │
+        ├─scss
+        │      style.scss
+        │
+        └─view
+                FirstPage.js
+                SecondPage.js
 ```
