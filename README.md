@@ -13,12 +13,12 @@ npm run build
 ```
 ### Development Frontend
 ```bash
-npm run dev
+npm run front
 ```
 ### Development Backend
 ```bash
 npm run build
-npm run server
+npm run back
 ```
 ## Dependencies
 
